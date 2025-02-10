@@ -12,10 +12,10 @@ class Stack<Type> {
   pop(): Type {
     if (this.isEmpty()) {
       throw new Error("Stack Underflow: Cannot pop, stack is empty");
-    }
+    } 
 
-    const removedValue = this.items.pop() as Type;
-    return removedValue;
+    const removedValue = this.items.pop();
+    return removedValue as Type;
   }
 
   peek(): Type {
