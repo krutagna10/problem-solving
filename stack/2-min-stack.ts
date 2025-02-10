@@ -32,4 +32,3 @@ class MinStack {
     return this.minItems[this.minItems.length - 1];
   }
 }
-const arr = [1,2, 3];
