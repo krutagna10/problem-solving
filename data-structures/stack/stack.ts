@@ -11,7 +11,7 @@ class Stack<Type> {
 
   pop(): Type {
     if (this.isEmpty()) {
-      throw new Error("Stack Underflow: Cannot pop, stack is empty");
+      throw new Error("Stack Underflow");
     } 
 
     const removedValue = this.items.pop();
@@ -20,10 +20,10 @@ class Stack<Type> {
 
   peek(): Type {
     if (this.isEmpty()) {
-      throw new Error("Stack is empty, cannot peek");
+      throw new Error("Stack Underflow");
     }
 
-    return this.items[this.items.length - 1];
+    return this.items[this.size() - 1];
   }
 
   isEmpty(): boolean {
