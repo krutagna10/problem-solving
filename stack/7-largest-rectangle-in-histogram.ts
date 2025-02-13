@@ -49,7 +49,8 @@ function largestRectangleArea(heights: number[]): number {
     stack.push([pushbackIndex, heights[i]]);
   }
 
-  for (let i = 0; i < stack.size(); i++) {
+  const stackLen = stack.size();
+  for (let i = 0; i < stackLen; i++) {
     const [index, height] = stack.pop();
     console.log({ index, height });
     const currArea = (heights.length - index) * height;
