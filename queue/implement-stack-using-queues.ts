@@ -1,48 +1,12 @@
-class MyQueue {
-  items: number[];
-
-  constructor() {
-    this.items = [];
-  }
-
-  enqueue(value: number): void {
-    this.items.push(value);
-  }
-
-  dequeue(): number {
-    if (this.isEmpty()) {
-      throw new Error("Queue Underflow");
-    }
-    return this.items.shift() as number;
-  }
-
-  peek(): number {
-    if (this.isEmpty()) {
-      throw new Error("Queue Underflow")
-    }
-    return this.items[0];
-  }
-
-  isEmpty(): boolean {
-    return this.size() === 0;
-  }
-
-  size(): number {
-    return this.items.length;
-  }
-
-  clear(): void {
-    this.items = [];
-  }
-}
+import Queue from "../data-structures/queue/queue";
 
 class MyStack {
-  queue1: MyQueue;
-  queue2: MyQueue;
+  queue1: Queue<number>;
+  queue2: Queue<number>;
 
   constructor() {
-    this.queue1 = new MyQueue();
-    this.queue2 = new MyQueue();
+    this.queue1 = new Queue();
+    this.queue2 = new Queue();
   }
 
   push(x: number): void {
