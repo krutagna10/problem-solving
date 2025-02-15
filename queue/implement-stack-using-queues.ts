@@ -1,12 +1,24 @@
 import Queue from "../data-structures/queue/queue";
 
+class TransferableQueue extends Queue<number> {
+  static transfer(
+    sourceQueue: Queue<number>,
+    destinationQueue: Queue<number>,
+    length: number
+  ) {
+    while (sourceQueue.size() > length) {
+      destinationQueue.enqueue(sourceQueue.dequeue());
+    }
+  }
+}
+
 class MyStack {
-  queue1: Queue<number>;
-  queue2: Queue<number>;
+  queue1: TransferableQueue
+  queue2: TransferableQueue;
 
   constructor() {
-    this.queue1 = new Queue();
-    this.queue2 = new Queue();
+    this.queue1 = new TransferableQueue();
+    this.queue2 = new TransferableQueue();
   }
 
   push(x: number): void {
@@ -14,28 +26,17 @@ class MyStack {
   }
 
   pop(): number {
-    while (this.queue1.size() > 1) {
-      this.queue2.enqueue(this.queue1.dequeue());
-    }
+    TransferableQueue.transfer(this.queue1, this.queue2, 1);
     const removedElement = this.queue1.dequeue();
-
-    while (this.queue2.size() > 0) {
-      this.queue1.enqueue(this.queue2.dequeue());
-    }
+    TransferableQueue.transfer(this.queue2, this.queue1, 0);
     return removedElement;
   }
 
   top(): number {
-    while (this.queue1.size() > 1) {
-      this.queue2.enqueue(this.queue1.dequeue());
-    }
-
+    TransferableQueue.transfer(this.queue1, this.queue2, 1);
     const topElement = this.queue1.dequeue();
     this.queue2.enqueue(topElement);
-
-    while (this.queue2.size() > 0) {
-      this.queue1.enqueue(this.queue2.dequeue());
-    }
+    TransferableQueue.transfer(this.queue2, this.queue1, 0);
     return topElement as number;
   }
 
@@ -43,3 +44,4 @@ class MyStack {
     return this.queue1.isEmpty();
   }
 }
+
