@@ -8,3 +8,8 @@ function removeElement(nums: number[], val: number): number {
   }
   return k;
 };
+
+
+
+
+
