@@ -128,8 +128,8 @@ class SinglyLinkedList<T> {
       return -1;
     }
 
-    let index = 0;
     let currNode = this.head;
+    let index = 0;
     while (currNode) {
       if (currNode.value === value) {
         return index;
