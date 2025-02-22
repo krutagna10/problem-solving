@@ -8,5 +8,3 @@ function productofArray(arr: number[]): number {
   }
   return arr[0] * productofArray(arr.slice(1));
 }
-
-console.log(productofArray([1, 2, 3, 10]));

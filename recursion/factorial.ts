@@ -5,4 +5,3 @@ function factorial(num: number): number {
   return num * factorial(num - 1);
 }
 
-console.log(factorial(5));

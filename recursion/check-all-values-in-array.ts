@@ -3,8 +3,11 @@ function checkAll(arr: number[], callback: (num: number) => boolean) {
     return true;
   }
 
-  if (callback(arr[0])) {
-    return checkAll(arr.slice(1), callback);
+  const firstElement = arr.shift();
+
+  if (callback(firstElement)) {
+    return checkAll(arr, callback);
   }
   return false;
 }
+
