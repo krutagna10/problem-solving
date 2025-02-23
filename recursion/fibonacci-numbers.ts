@@ -1,6 +1,6 @@
-function fib(n: number): number {
+function fibonacci(n: number): number {
   if (n <= 2)  {
     return 1;
   }
-  return fib(n - 1) + fib(n - 2);
+  return fibonacci(n - 1) + fibonacci(n - 2);
 }
