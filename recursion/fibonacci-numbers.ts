@@ -1,22 +1,9 @@
-function fibonacci(n: number) {
-  if (n === 1) {
-    return 0;
+function fibonacci(n: number): number {
+  if (n <= 1) {
+    return n;
   }
-  if (n === 2) {
-    return 1;
-  }
+  
+  return fibonacci(n - 1) + fibonacci(n - 2);
 }
 
-function fib(n: number, memo: Record<string, number> = {}): number {
-  if (memo[n] !== undefined) {
-    return memo[n];
-  }
 
-  if (n <= 1) {
-      return n;
-  }
-
-  const result = fib(n - 1) + fib(n - 2);
-  memo[n] = result;
-  return result;
-};
