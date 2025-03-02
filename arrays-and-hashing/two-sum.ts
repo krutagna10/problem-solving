@@ -1,5 +1,12 @@
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @returns {number[]}
+ * @time O(n)
+ * @space O(n)
+ */
 function twoSum(nums: number[], target: number): number[] {
-  let map = new Map();
+  let map = new Map<number, number>();
 
   for (let i = 0; i < nums.length; i++) {
     map.set(nums[i], i);
