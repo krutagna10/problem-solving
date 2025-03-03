@@ -1,3 +1,9 @@
+/**
+ * @param {number[]} nums
+ * @returns {boolean}
+ * @time O(n)
+ * @space O(n)
+ */
 function containsDuplicate(nums: number[]): boolean {
   let set = new Set<number>();
   for (let i = 0; i < nums.length; i++) {

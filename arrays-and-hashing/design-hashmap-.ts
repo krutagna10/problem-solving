@@ -18,6 +18,7 @@ class ModifiedSinglyLinkedList extends SinglyLinkedList<[number, number]> {
   }
 }
 
+
 class MyHashMap {
   items: ModifiedSinglyLinkedList[];
   constructor() {
@@ -60,6 +61,3 @@ class MyHashMap {
   }
 }
 
-const map = new MyHashMap();
-map.put(1, 100);
-console.log(map.get(1));
