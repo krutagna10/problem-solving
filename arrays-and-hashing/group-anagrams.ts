@@ -1,5 +1,4 @@
 /**
- * 
  * @param {string} str
  * @returns {string} 
  * @time O(n)
