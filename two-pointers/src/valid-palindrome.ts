@@ -34,3 +34,5 @@ function calculateAlphanumericStr(str: string): string {
     .filter((char) => regex.test(char))
     .join("");
 }
+
+export default isPalindrome;  

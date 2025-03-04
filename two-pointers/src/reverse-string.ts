@@ -15,3 +15,5 @@ function reverseString(s: string[]): void {
     end--;
   }
 }
+
+export default reverseString;

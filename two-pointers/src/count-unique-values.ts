@@ -25,3 +25,5 @@ function countUniqueValues(nums: number[]): number {
 
   return uniqueValues;
 }
+
+export default countUniqueValues;
