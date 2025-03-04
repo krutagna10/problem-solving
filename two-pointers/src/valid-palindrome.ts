@@ -8,15 +8,15 @@ function isPalindrome(str: string): boolean {
   const lowercaseStr = str.toLowerCase();
   const alphanumericStr = calculateAlphanumericStr(lowercaseStr);
 
-  let start = 0;
-  let end = alphanumericStr.length - 1;
+  let left = 0;
+  let right = alphanumericStr.length - 1;
 
-  while (start < end) {
-    if (alphanumericStr[start] !== alphanumericStr[end]) {
+  while (left < right) {
+    if (alphanumericStr[left] !== alphanumericStr[right]) {
       return false;
     }
-    start++;
-    end--;
+    left++;
+    right--;
   }
   return true;
 }

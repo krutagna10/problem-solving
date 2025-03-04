@@ -8,19 +8,21 @@ function sumZero(nums: number[]): number[] {
   if (nums.length < 2) {
     return [-1, -1];
   }
-  let start = 0;
-  let end = nums.length - 1;
+  let left = 0;
+  let right = nums.length - 1;
 
-  while (start < end) {
-    const sum = nums[start] + nums[end];
+  while (left < right) {
+    const sum = nums[left] + nums[right];
     if (sum === 0) {
-      return [start, end];
+      return [left, right];
     } else if (sum > 0) {
-      end--;
+      right--;
     } else {
-      start++;
+      left++;
     }
   }
 
   return [-1, -1];
 }
+
+export default sumZero;
