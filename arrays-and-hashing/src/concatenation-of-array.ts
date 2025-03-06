@@ -11,3 +11,5 @@ function getConcatenation(nums: number[]): number[] {
   }
   return ans;
 }
+
+export default getConcatenation;

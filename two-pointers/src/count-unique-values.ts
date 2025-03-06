@@ -1,6 +1,7 @@
 /**
- * @param {number[]} nums
- * @returns {number}
+ * Counts the number of unique values in an array
+ * @param {number[]} nums - Sorted array of numbers
+ * @returns {number} - Count of unique values
  * @time O(n)
  * @space O(1)
  */

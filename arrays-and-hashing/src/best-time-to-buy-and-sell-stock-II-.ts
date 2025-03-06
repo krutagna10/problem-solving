@@ -5,11 +5,14 @@
  * @space O(1)
  */
 function maxProfit(prices: number[]): number {
-  let profit = 0;
+  let totalProfit = 0;
   for (let i = 1; i < prices.length; i++) {
     if (prices[i] > prices[i - 1]) {
-      profit += prices[i] - prices[i - 1];
+      const currProfit = prices[i] - prices[i - 1];
+      totalProfit += currProfit;
     }
   }
-  return profit;
+  return totalProfit;
 }
+
+export default maxProfit;

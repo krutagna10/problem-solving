@@ -1,6 +1,7 @@
 /**
- * @param {number[]} nums
- * @returns {number[]}
+ * Finds two indices in a sorted array whose elements sum to zero.
+ * @param {number[]} nums - Sorted array of numbers
+ * @returns {number[]} - Indices whose elements sum to zero.
  * @time O(n)
  * @space O(1)
  */

@@ -1,6 +1,7 @@
 /**
- * @param {string[]} s
- * @returns {void}
+ * Reverses an array of characters
+ * @param {string[]} s - Array of characters
+ * @returns {void} 
  * @time O(n)
  * @space O(1)
  */

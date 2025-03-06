@@ -1,6 +1,10 @@
+/**
+ * @template T
+ */
 class Node<T> {
   value: T;
   next: null | Node<T>;
+
   constructor(value: T) {
     this.value = value;
     this.next = null;
@@ -134,7 +138,7 @@ class SinglyLinkedList<T> {
       if (currNode.value === value) {
         return index;
       }
-      currNode = currNode.next
+      currNode = currNode.next;
       index++;
     }
     return -1;
@@ -195,4 +199,3 @@ class SinglyLinkedList<T> {
 }
 
 export default SinglyLinkedList;
-

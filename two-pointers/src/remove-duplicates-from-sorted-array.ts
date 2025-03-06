@@ -1,6 +1,7 @@
 /**
- * @param {number[]} nums
- * @returns {number}
+ * Removes the duplicates in-place from a sorted array
+ * @param {number[]} nums - Sorted array nums
+ * @returns {number} - Count of unique elements
  * @time O(n)
  * @space O(1)
  */
@@ -12,7 +13,6 @@ function removeDuplicates(nums: number[]): number {
       left++;
       nums[left] = nums[right];
     }
-    console.log({ left, right});
   }
 
   return left + 1;

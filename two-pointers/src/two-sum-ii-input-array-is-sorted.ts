@@ -1,7 +1,8 @@
 /**
- * @param {number[]} nums
- * @param {number} target
- * @retuns {number[]}
+ * Finds two indices whose elements sum to target
+ * @param {number[]} nums - Sorted array of numbers
+ * @param {number} target - Target number
+ * @retuns {number[]} - Indices who elements sum to target
  * @time O(n)
  * @space O(1)
  */

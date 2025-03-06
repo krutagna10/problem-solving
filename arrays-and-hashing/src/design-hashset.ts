@@ -1,9 +1,9 @@
-import SinglyLinkedList from "../data-structures/linked-list/singly-linked-list";
+import SinglyLinkedList from "../../data-structures/linked-list/singly-linked-list";
 
 class MyHashSet {
   items: SinglyLinkedList<number>[];
   constructor() {
-    this.items = Array.from({ length: 10000 }, () => new SinglyLinkedList() )
+    this.items = Array.from({ length: 10000 }, () => new SinglyLinkedList());
   }
 
   hash(key: number): number {

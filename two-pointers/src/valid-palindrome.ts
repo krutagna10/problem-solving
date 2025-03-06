@@ -1,6 +1,7 @@
 /**
- * @param {string} str
- * @returns {boolean}
+ * Checks if the string is palindrome after converting all uppercase letters to lowercase letters and remove all non-alphanumeric characters
+ * @param {string} str - Input String
+ * @returns {boolean} - Whether the string is palindrome or not
  * @time O(n)
  * @space O(n)
  */
@@ -22,8 +23,9 @@ function isPalindrome(str: string): boolean {
 }
 
 /**
- * @param {string} str
- * @returns {string}
+ * Creates a string that only consists of alphanumeric characters
+ * @param {string} str - Input String
+ * @returns {string} - String of alphanumeric characters
  * @time O(n)
  * @space O(n)
  */

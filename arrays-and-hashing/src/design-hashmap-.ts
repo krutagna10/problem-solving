@@ -1,4 +1,4 @@
-import SinglyLinkedList from "../data-structures/linked-list/singly-linked-list";
+import SinglyLinkedList from "../../data-structures/linked-list/singly-linked-list";
 
 class ModifiedSinglyLinkedList extends SinglyLinkedList<[number, number]> {
   modifiedIndexOf(key: number): number {
