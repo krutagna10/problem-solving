@@ -1,7 +1,7 @@
 /**
  * Checks if the string is palindrome after converting all uppercase letters to lowercase letters and remove all non-alphanumeric characters
  * @param {string} str - Input String
- * @returns {boolean} - Whether the string is palindrome or not
+ * @returns {boolean} - `true` if the string is palindrome, `false` otherwise
  * @time O(n)
  * @space O(n)
  */
