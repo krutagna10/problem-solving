@@ -1,6 +1,7 @@
 /**
- * @param {number[]} nums
- * @returns {number[]}
+ * Concatenates the array with itself
+ * @param {number[]} nums - Array of integers
+ * @returns {number[]} - Concetenation of array with itself
  * @time O(n)
  * @space O(n) 
  */

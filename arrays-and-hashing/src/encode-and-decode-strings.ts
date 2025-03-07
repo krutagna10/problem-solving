@@ -1,10 +1,4 @@
 class Solution {
-  /**
-   * @param {string[]} strs
-   * @returns {string}
-   * @time O(n)
-   * @space O(n)
-   */
   encode(strs: string[]): string {
     if (strs.length === 0) {
       return "";
@@ -18,12 +12,6 @@ class Solution {
     return encodedStr;
   }
 
-  /**
-   * @param {string} str
-   * @returns {string[]}
-   * @time O(n)
-   * @space O(n)
-   */
   decode(str: string): string[] {
     if (str.length === 0) {
       return [];

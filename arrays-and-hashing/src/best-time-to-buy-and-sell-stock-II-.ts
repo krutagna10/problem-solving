@@ -1,6 +1,7 @@
 /**
- * @param {number[]} prices
- * @returns {number}
+ * Calculates the maximum profit that can be achieved 
+ * @param {number[]} prices - Array of prices of given stock
+ * @returns {number} - Maximum profit that can be achieved
  * @time O(n)
  * @space O(1)
  */

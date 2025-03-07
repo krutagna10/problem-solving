@@ -1,9 +1,3 @@
-/**
- * @param {number[]} nums
- * @returns {number}
- * @time O(n)
- * @space O(1)
- */
 function firstMissingPositive(nums: number[]): number {
   for (let i = 0; i < nums.length; i++) {
     if (nums[i] < 0) {

@@ -9,7 +9,7 @@
 function threeSumClosest(nums: number[], target: number): number {
   nums.sort((a, b) => a - b);
   let closestSum = Infinity;
-
+  
   for (let i = 0; i < nums.length - 2; i++) {
     let left = i + 1;
     let right = nums.length - 1;
@@ -22,6 +22,7 @@ function threeSumClosest(nums: number[], target: number): number {
       } else {
         left++;
       }
+      
       if (Math.abs(target - currSum) < Math.abs(target - closestSum)) {
         closestSum = currSum;
       }

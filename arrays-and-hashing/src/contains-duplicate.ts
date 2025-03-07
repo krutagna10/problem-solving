@@ -1,6 +1,7 @@
 /**
- * @param {number[]} nums
- * @returns {boolean}
+ * Checks whether any value at least twice in the array
+ * @param {number[]} nums - Array of integers
+ * @returns {boolean} - `true` is any value appears twice in the array, `false` otherwise
  * @time O(n)
  * @space O(n)
  */
