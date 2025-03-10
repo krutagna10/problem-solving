@@ -1,41 +1,126 @@
-class Stack<Type> {
-  private items: Type[];
+/**
+ * Class representing a node
+ * @template T - The type of value stored in node.
+ */
+class Node<T> {
+  value: T;
+  next: null | Node<T>;
 
+  /**
+   * Creates a node instance
+   * @param {T} value - The value to be stored in the node.
+   */
+  constructor(value: T) {
+    this.value = value;
+    this.next = null;
+  }
+}
+
+/**
+ * Class representing a stack
+ * @template T - The type of elements stored in stack
+ */
+class Stack<T> {
+  head: null | Node<T>;
+  tail: null | Node<T>;
+
+  /**
+   * Creates a stack instance
+   */
   constructor() {
-    this.items = [];
+    this.head = null;
+    this.tail = null;
   }
 
-  push(value: Type): void {
-    this.items.push(value);
+  /**
+   * Pushes element at the pop of stack
+   * @param {T} value - The value to be added to stack
+   * @returns {void}
+   */
+  push(value: T): void {
+    const newNode = new Node(value);
+    if (this.head === null) {
+      this.head = newNode;
+      this.tail = newNode;
+    } else {
+      newNode.next = this.head;
+      this.head = newNode;
+    }
   }
 
-  pop(): Type {
+  /**
+   * Pops element from the top of stack
+   * @throws {Error} - An error when the stack is empty
+   * @returns {T} - The value popped from stack
+   */
+  pop(): T {
+    let poppedValue;
     if (this.isEmpty()) {
       throw new Error("Stack Underflow");
-    } 
-
-    const removedValue = this.items.pop();
-    return removedValue as Type;
+    } else if (this.head === this.tail) {
+      poppedValue = this.head.value;
+      this.head = null;
+      this.tail = null;
+    } else {
+      poppedValue = this.head.value;
+      this.head = this.head.next;
+    }
+    return poppedValue;
   }
 
-  peek(): Type {
+  /**
+   * Retrives the value at the top of stack
+   * @throws {Error} - An error when the stack the empty
+   * @returns {T} - The value at the top of stack
+   */
+  peek(): T {
+   if (this.isEmpty()) {
+    throw new Error("Stack Underflow");
+   } 
+   return this.head.value;
+  }
+
+  /**
+   * Creates an array representation of the stack
+   * @returns {T[]} - An array containing all elements in the stack
+   */
+  toArray(): T[] {
     if (this.isEmpty()) {
-      throw new Error("Stack Underflow");
+      return [];
     }
 
-    return this.items[this.size() - 1];
+    const values = [];
+    let currNode = this.head;
+    while (currNode) {
+      values.push(currNode.value);
+      currNode = currNode.next;
+    }
+    return values;
   }
 
+  /**
+   * Checks whether the stack is empty
+   * @returns {boolean} - `true` if stack is empty, false otherwise
+   */
   isEmpty(): boolean {
-    return this.items.length === 0;
+    return this.head === null;
   }
 
-  clear(): void {
-    this.items = [];
-  }
-
+  /**
+   * Calculates the size of the stack
+   * @returns {number} - The size of stack
+   */
   size(): number {
-    return this.items.length;
+    if (this.isEmpty()) {
+      return 0;
+    } 
+    let len = 0;
+    let currNode = this.head;
+    while (currNode) {
+      len++;
+      currNode = currNode.next;
+    }
+    return len;
   }
 }
 
