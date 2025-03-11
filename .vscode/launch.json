@@ -9,7 +9,7 @@
       "request": "launch",
       "name": "Debug Typescript",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}/recursion/src/print-gfg-n-times.ts",
+      "program": "${workspaceFolder}/recursion/src/find-the-kth-character-in-string-game-i.ts",
       "runtimeArgs": [
         "-r",
         "ts-node/register",
