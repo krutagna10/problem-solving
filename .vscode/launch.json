@@ -9,7 +9,7 @@
       "request": "launch",
       "name": "Debug Typescript",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}/recursion/src/find-the-kth-character-in-string-game-i.ts",
+      "program": "${workspaceFolder}/two-pointers/src/rotate-array.ts",
       "runtimeArgs": [
         "-r",
         "ts-node/register",

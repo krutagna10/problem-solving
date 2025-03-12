@@ -2,8 +2,8 @@
  * Generates a new string by changing each character in word to its next character, and appending it to original word
  * @param {number} k - A positive integer
  * @returns {string} - The `kth` character in the word
- * @time O()
- * @space O()
+ * @time O(k)
+ * @space O(k)
  */
 function kthCharacter(k: number): string {
   function kthCharacterRecursive(word: string) {
