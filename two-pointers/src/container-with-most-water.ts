@@ -15,10 +15,10 @@ function maxArea(height: number[]): number {
     const currHeight = Math.min(height[left], height[right]);
     const currWater = currWidth * currHeight;
     maxWater = Math.max(maxWater, currWater);
-    if (height[left] > height[right]) {
-      right--;
-    } else {
+    if (height[left] <= height[right]) {
       left++;
+    } else {
+      right--;
     }
   }
   return maxWater;

@@ -9,7 +9,7 @@
       "request": "launch",
       "name": "Debug Typescript",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}/two-pointers/src/rotate-array.ts",
+      "program": "${workspaceFolder}/two-pointers/src/boats-to-save-people.ts",
       "runtimeArgs": [
         "-r",
         "ts-node/register",
