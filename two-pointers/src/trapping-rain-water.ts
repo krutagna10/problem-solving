@@ -8,21 +8,19 @@
 function trap(height: number[]): number {
   let left = 0;
   let right = height.length - 1;
-  let maxLeft = 0;
-  let maxRight = 0;
+  let maxLeft = height[left];
+  let maxRight = height[right];
   let trappedWater = 0;
 
-  while (left <= right) {
-    if (maxLeft <= maxRight) {
-      const currTrappedWater = Math.max(0, maxLeft - height[left]);
-      trappedWater += currTrappedWater;
-      maxLeft = Math.max(maxLeft, height[left]);
+  while (left < right) {
+    if (maxLeft < maxRight) {
       left++;
+      maxLeft = Math.max(maxLeft, height[left]);
+      trappedWater += maxLeft - height[left];
     } else {
-      const currTrappedWater = Math.max(0, maxRight - height[right]);
-      trappedWater += currTrappedWater;
-      maxRight = Math.max(maxRight, height[right]);
       right--;
+      maxRight = Math.max(maxRight, height[right]);
+      trappedWater += maxRight - height[right];
     }
   }
   return trappedWater;
