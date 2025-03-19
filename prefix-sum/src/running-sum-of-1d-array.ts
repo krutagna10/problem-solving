@@ -6,15 +6,15 @@
  * @space O(n)
  */
 function runningSum(nums: number[]): number[] {
-  const prefixSum = [];
-  let sum = 0;
+  const prefix = new Array(nums.length);
+  let prefixSum = 0;
 
-  for (const num of nums) {
-    sum += num;
-    prefixSum.push(sum);
+  for (let i = 0; i < nums.length; i++) {
+    prefixSum += nums[i];
+    prefix[i] = prefixSum;
   }
 
-  return prefixSum;
+  return prefix;
 };
 
 export default runningSum;

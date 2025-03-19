@@ -9,7 +9,7 @@
       "request": "launch",
       "name": "Debug Typescript",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}/two-pointers/src/trapping-rain-water.ts",
+      "program": "${workspaceFolder}/sliding-window/src/maximum-average-subarray-i.ts",
       "runtimeArgs": [
         "-r",
         "ts-node/register",

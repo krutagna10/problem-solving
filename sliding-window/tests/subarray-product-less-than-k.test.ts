@@ -1,5 +1,5 @@
 import { test, expect } from "@jest/globals";
-import numSubarrayProductLessThanK from "../src/subarray-product-less-than-k";
+import numSubarrayProductLessThanK from "../../sliding-window/src/subarray-product-less-than-k";
 
 
 test("should return number of contiguous subarrays whose product is less than k", () => {
